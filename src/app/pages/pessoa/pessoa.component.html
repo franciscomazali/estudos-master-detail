@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Detalhe Funcionário</title>
+</head>
+
+<body>
+  <h1>Funcionário Detalhes</h1>
+  <table *ngFor="let p of pessoa">
+    <tr>
+      <th>Nome:</th>
+      <td>{{ p.nome }}</td>
+    </tr>
+    <tr>
+      <th>E-mail:</th>
+      <td>{{ p.email }}</td>
+    </tr>
+    <tr>
+      <th>Tipo:</th>
+      <td>{{ p.tipo }}</td>
+    </tr>
+    <tr>
+      <th>Documento:</th>
+      <td>{{ p.cpf  }}</td>
+    </tr>
+    <tr>
+      <th>Telefone:</th>
+      <td>{{ p.telefone }}</td>
+    </tr>
+  </table>
+
+</body>
+
+</html>

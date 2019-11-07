@@ -1,0 +1,16 @@
+
+  <h1>Lista Funcionários</h1>
+  <table *ngIf="pessoas">
+    <tr>
+      <th>Nome:</th>
+      <th>Tipo:</th>
+      <th>E-mail</th>
+      <th>id</th>
+    </tr>
+    <tr *ngFor="let p of pessoas">
+      <td>{{ p.nome }}</td>
+      <td>{{ p.tipo }}</td>
+      <td>{{ p.email }}</td>
+      <td><a [href]="'pessoa/' + p.id">detalhe</a></td>
+    </tr>
+  </table>
