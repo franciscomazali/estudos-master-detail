@@ -11,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PessoaService {
 
-  readonly url: string = 'http://www.mocky.io/v2/5dc365a130000067003473ec';
+  readonly url: string = 'https://estudosapi.herokuapp.com/pessoa';
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Pessoa[]> {
@@ -19,6 +19,8 @@ export class PessoaService {
   }
 
   getDetail(id): Observable<Pessoa> {
-    return this.http.get<Pessoa>(id);
+    debugger
+    const param = this.url + '/' + id;
+    return this.http.get<Pessoa>(param);
   }
 }

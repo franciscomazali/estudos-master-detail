@@ -20,8 +20,7 @@ export class PessoaComponent implements OnInit {
       switchMap(param => {
         const id = +param.get('id');
         console.log(id);
-        const link = `http://www.mocky.io/v2${id}`;
-        return this.pessoaDetalhe.getDetail(link);
+        return this.pessoaDetalhe.getDetail(id);
       })
     ).subscribe(pes => this.pessoa = pes);
   }

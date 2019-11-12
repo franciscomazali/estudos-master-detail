@@ -1,0 +1,94 @@
+<form [formGroup]="categoryForm" (submit)="submitForm()">
+    <div class="card">
+        <div class="card-header">
+            Informações sobre a categoria
+        </div>
+        <div class="card-body">
+            <div class="form-row">
+                <div>
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" id="name" formControlName="name">
+                    <div class="text-danger"
+                        *ngIf="categoryForm.get('name').invalid && categoryForm.get('name').touched">
+                        <div *ngIf="categoryForm.get('name').errors['required']">dado obrigatório</div>
+                        <div *ngIf="categoryForm.get('name').errors['minlength']">deve ter no minímo 2 caracteres</div>
+                    </div>
+                </div>
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="text" name="email" id="email" formControlName="email">
+                    <div class="text-danger"
+                        *ngIf="categoryForm.get('email').invalid && categoryForm.get('email').touched">
+                        <div *ngIf="categoryForm.get('email').errors['required']">dado obrigatório</div>
+                        <div *ngIf="categoryForm.get('email').errors['minlength']">deve ter no minímo 2 caracteres</div>
+                    </div>
+                </div>
+                <div>
+                    <label for="tipo">Tipo</label>
+                    <input type="text" name="tipo" id="tipo" formControlName="tipo">
+                    <div class="text-danger"
+                        *ngIf="categoryForm.get('tipo').invalid && categoryForm.get('tipo').touched">
+                        <div *ngIf="categoryForm.get('tipo').errors['required']">dado obrigatório</div>
+                        <div *ngIf="categoryForm.get('tipo').errors['minlength']">deve ter no minímo 2 caracteres</div>
+                    </div>
+                </div>
+                <div>
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" id="name" formControlName="name">
+                    <div class="text-danger"
+                        *ngIf="categoryForm.get('name').invalid && categoryForm.get('name').touched">
+                        <div *ngIf="categoryForm.get('name').errors['required']">dado obrigatório</div>
+                        <div *ngIf="categoryForm.get('name').errors['minlength']">deve ter no minímo 2 caracteres</div>
+                    </div>
+                </div>
+                <di>
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" id="name" formControlName="name">
+                    <div class="text-danger"
+                        *ngIf="categoryForm.get('name').invalid && categoryForm.get('name').touched">
+                        <div *ngIf="categoryForm.get('name').errors['required']">dado obrigatório</div>
+                        <div *ngIf="categoryForm.get('name').errors['minlength']">deve ter no minímo 2 caracteres</div>
+                    </div>
+            </div>
+            <div>
+                <label for="name">Nome</label>
+                <input type="text" name="name" id="name" formControlName="name">
+                <div class="text-danger"
+                        *ngIf="categoryForm.get('name').invalid && categoryForm.get('name').touched">
+                        <div *ngIf="categoryForm.get('name').errors['required']">dado obrigatório</div>
+                        <div *ngIf="categoryForm.get('name').errors['minlength']">deve ter no minímo 2 caracteres</div>
+                    </div>
+            </div>
+            <div>
+                <label for="name">Nome</label>
+                <input type="text" name="name" id="name" formControlName="name">
+                <div class="text-danger"
+                        *ngIf="categoryForm.get('name').invalid && categoryForm.get('name').touched">
+                        <div *ngIf="categoryForm.get('name').errors['required']">dado obrigatório</div>
+                        <div *ngIf="categoryForm.get('name').errors['minlength']">deve ter no minímo 2 caracteres</div>
+                    </div>
+            </div>
+            <div>
+                <label for="description">Descrição</label>
+                <input type="text" name="description" id="description" formControlName="description">
+            </div>
+        </div>
+    </div>
+    </div>
+    <button type="submit" [disabled]="submitingForm || categoryForm.invalid">Salvar</button>
+</form>
+
+
+
+<!-- <form>
+    Nome:<br>
+    <input type="text" name="nome"><br>
+    Tipo<br>
+    <input type="text" name="tipo">
+    E-mail<br>
+    <input type="text" name="email">
+    Documento<br>
+    <input type="text" name="documento">
+    Telefone<br>
+    <input type="text" name="telefone">
+</form> -->
