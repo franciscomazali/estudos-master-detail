@@ -8,12 +8,14 @@ import { HttpClient } from '@angular/common/http';
 
 import { PessoaComponent } from './pages/pessoa/pessoa.component';
 import { ListaPessoasComponent } from './pages/lista-pessoas/lista-pessoas.component';
+import { NovoFuncionarioComponent } from './pages/novo-funcionario/novo-funcionario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PessoaComponent,
-    ListaPessoasComponent
+    ListaPessoasComponent,
+    NovoFuncionarioComponent
   ],
   imports: [
     BrowserModule,
