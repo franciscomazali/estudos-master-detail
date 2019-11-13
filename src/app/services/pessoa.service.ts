@@ -19,7 +19,6 @@ export class PessoaService {
   }
 
   getDetail(id): Observable<Pessoa> {
-    debugger
     const param = this.url + '/' + id;
     return this.http.get<Pessoa>(param);
   }
